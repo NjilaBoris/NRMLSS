@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { DM_Mono, Host_Grotesk, Koulen } from "next/font/google";
 import "./globals.css";
+import ShoppingCart from "@/components/ShoppingCart/ShoppingCart";
 import TransitionProvider from "@/providers/TransitionProvider";
 import ClientLayout from "@/client-layout";
-import Footer from "@/components/Footer";
-import Menu from "@/components/Menu";
+import Footer from "@/components/Footer/Footer";
+import Menu from "@/components/Menu/Menu";
 
 const koulen = Koulen({
   weight: "400",
@@ -45,6 +46,7 @@ export default function RootLayout({
             <Menu />
             {children}
           </ClientLayout>
+          <ShoppingCart />
         </TransitionProvider>
       </body>
     </html>
